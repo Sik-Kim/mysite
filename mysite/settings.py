@@ -30,8 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
+INSTALLED_APPS = [  # 이러이러한 앱들이 있다.
+    'polls.apps.PollsConfig', #polls app 포함함
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,7 +77,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db.mysql',
+        'NAME': 'my_db',
+        'USER': 'root',
+        'HOST':'127.0.0.1',
+        'PASSWORD':'namu',
+        'PORT':'3306'
     }
 }
 
